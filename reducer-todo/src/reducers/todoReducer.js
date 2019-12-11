@@ -1,5 +1,5 @@
 export const initialState = [{
-  item: 'Initial Item',
+  todo: 'Initial Item',
   completed: false,
   id: Date.now()
 }]
