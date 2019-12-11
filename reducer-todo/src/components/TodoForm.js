@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 
 export function TodoForm(props) {
   const [form, setForm] = useState('');
-  
-  // const handleChanges = e => {
-  //   dispatch({ type: "" })
-  // }
 
   return (
     <form onSubmit={(event) => {
@@ -23,25 +19,5 @@ export function TodoForm(props) {
       />
       <button type='submit'>Add Todo</button>
     </form>
-
-
-
-
-
-
-    // <div>
-    //   <input
-    //     type='text'
-    //     name='todoText'
-    //     value={todoState.item}
-    //     //  onChange={handleChanges}
-    //   />
-    //   <button
-    //     onClick={() => {
-    //       dispatch({ type: 'ADD_TODO', payload: todoState.item })
-    //   }}>
-    //     Add item
-    //   </button>
-    // </div>
   );
 };
