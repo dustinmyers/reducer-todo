@@ -26,10 +26,18 @@ function App() {
     dispatch({ type: 'COMPLETED_TODO', payload: id })
   }
 
+  const clearCompleted = () => {
+    dispatch({ type: 'CLEAR_COMPLETED' })
+  }
+
   return (
     <div className='App'>
       <TodoList state={state} handleComplete={handleComplete} />
       <TodoForm addTodo={addTodo} />
+      <button onClick={(e) => {
+        e.preventDefault();
+        clearCompleted();
+      }}>Clear Completed</button>
     </div>
   );
 };
