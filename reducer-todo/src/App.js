@@ -13,7 +13,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   console.log(state);
 
-  const addTodo = (input) => {
+  const addTodo = input => {
     const newTodo = {
       todo: input,
       completed: false,
@@ -22,7 +22,7 @@ function App() {
     dispatch({ type: 'ADD_TODO', payload: newTodo })
   }
 
-  const handleComplete = (id) => {
+  const handleComplete = id => {
     dispatch({ type: 'COMPLETED_TODO', payload: id })
   }
 
@@ -34,7 +34,7 @@ function App() {
     <div className='App'>
       <TodoList state={state} handleComplete={handleComplete} />
       <TodoForm addTodo={addTodo} />
-      <button onClick={(e) => {
+      <button onClick={e => {
         e.preventDefault();
         clearCompleted();
       }}>Clear Completed</button>

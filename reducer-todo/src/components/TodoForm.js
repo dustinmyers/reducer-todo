@@ -4,7 +4,7 @@ export function TodoForm(props) {
   const [form, setForm] = useState('');
 
   return (
-    <form onSubmit={(event) => {
+    <form onSubmit={event => {
       event.preventDefault();
       props.addTodo(form);
       setForm('')
@@ -13,7 +13,7 @@ export function TodoForm(props) {
         name='todo'
         placeholder='Add Todo'
         value={form}
-        onChange={(event) => {
+        onChange={event => {
           setForm(event.target.value)
         }}
       />
